@@ -14,8 +14,8 @@ $$D_{SKL}(\mathcal{N}(m_1,\Sigma_1)||\mathcal{N}(m_0,\Sigma_0))=D_{KL}(\mathcal{
 ## Other Methods
 Noticeably, the optimization function $f$ in Donsker-Varadhan representation of kl-divergence $` D(P||Q)=\sup_f[\mathbb{E}_P(f(X))-\log\mathbb{E}_Q(e^{f(X)})] `$ can be simply seen as followed:<br>
 $$f = \log\frac{dP}{dQ} $$
-similarily, the D-V representation of $D(Q||P)$ can be optimized by $`f'=\log\frac{dQ}{dp}=-f`$.  
-It is worth mentioning that here we assume $P\ll Q$ and $Q\ll P$, since either of them causes $D_{SKL}$ to go to infinty.
+similarily, the D-V representation of $D(Q||P)$ can be optimized by $`f'=\log\frac{dQ}{dp}=-f`$. Note that the second equality rings true in a.e. manner ($` \frac{dP}{dQ}\cdot\frac{dQ}{dP}=1 \ a.e.,s.t\ P\ll Q\ll P `$), which is the result of the Randon-Nikodym theorm.  
+It is worth mentioning that here we assume $P\ll Q$ and $Q\ll P$, since either of them causes $D_{SKL}$ to go to infinty.  
 A trivial result is that:
 $$D_{SKL}(P||Q)=\sup_{f\in\mathcal{C}_Q}[\mathbb{E}_P(f(X))-\mathbb{E}_Q(f(X))-\log\mathbb{E}_P(e^{-f(X)})-\log\mathbb{E}_Q(e^{f(X)})]$$
 
