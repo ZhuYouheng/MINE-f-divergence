@@ -12,16 +12,12 @@ $$D_{KL}(\mathcal{N}(m_1,\Sigma_1)||\mathcal{N}(m_0,\Sigma_0))=\frac{\log e}{2}(
 $$D_{SKL}(\mathcal{N}(m_1,\Sigma_1)||\mathcal{N}(m_0,\Sigma_0))=D_{KL}(\mathcal{N}(m_1,\Sigma_1)||\mathcal{N}(m_0,\Sigma_0))+D_{KL}(\mathcal{N}(m_0,\Sigma_0)||\mathcal{N}(m_1,\Sigma_1))$$
 
 ## Other Methods
-Noticeably, the optimization function $f$ in Donsker-Varadhan representation of kl-divergence $D(P||Q)=\sup_f[\mathbb{E}_P(f(X))-\log\mathbb{E}_Q(e^{f(X)})]$ can be simply seen as followed:  
-$$
-f = \log\frac{dP}{dQ}
-$$
-similarily, the D-V representation of $D(Q||P)$ can be optimized by $f'=\log\frac{dQ}{dp}=-f$.  
+Noticeably, the optimization function $f$ in Donsker-Varadhan representation of kl-divergence $` D(P||Q)=\sup_f[\mathbb{E}_P(f(X))-\log\mathbb{E}_Q(e^{f(X)})] `$ can be simply seen as followed:<br>
+$$f = \log\frac{dP}{dQ} $$
+similarily, the D-V representation of $D(Q||P)$ can be optimized by $`f'=\log\frac{dQ}{dp}=-f`$.  
 It is worth mentioning that here we assume $P\ll Q$ and $Q\ll P$, since either of them causes $D_{SKL}$ to go to infinty.
 A trivial result is that:
-$$
-D_{SKL}(P||Q)=\sup_{f\in\mathcal{C}_Q}[\mathbb{E}_P(f(X))-\mathbb{E}_Q(f(X))-\log\mathbb{E}_P(e^{-f(X)})-\log\mathbb{E}_Q(e^{f(X)})]
-$$
+$$D_{SKL}(P||Q)=\sup_{f\in\mathcal{C}_Q}[\mathbb{E}_P(f(X))-\mathbb{E}_Q(f(X))-\log\mathbb{E}_P(e^{-f(X)})-\log\mathbb{E}_Q(e^{f(X)})]$$
 
 # More Experiments
 see Gibbs_MINE folder
